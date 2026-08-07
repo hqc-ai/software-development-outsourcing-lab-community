@@ -1,0 +1,31 @@
+tools:
+  - id: git-project-a
+    version: 1.0.0
+    owner: engineering-lab-owner
+    allowed_agents: [developer-agent, qa-agent]
+    project_scope: customer-a
+    action_scope: [read, branch, commit-test-branch, pr-draft]
+    credential_scope: project-a-task-scoped
+    approval_policy: L2
+    audit_log: true
+    provenance_required: true
+  - id: ci-nonprod
+    version: 1.0.0
+    owner: devops-lab-owner
+    allowed_agents: [qa-agent, devops-agent]
+    project_scope: assigned-project-only
+    action_scope: [run-tests, build, nonprod-diagnostics]
+    credential_scope: nonprod-only
+    approval_policy: L2
+    audit_log: true
+    provenance_required: true
+  - id: production-deploy
+    version: 1.0.0
+    owner: release-manager
+    allowed_agents: [devops-agent]
+    project_scope: assigned-project-only
+    action_scope: [deploy]
+    credential_scope: production-explicit
+    approval_policy: L4
+    audit_log: true
+    provenance_required: true

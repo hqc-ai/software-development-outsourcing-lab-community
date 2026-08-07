@@ -1,0 +1,14 @@
+projects:
+  customer-a:
+    workspace: ./workspace/customer-a
+    allowed_agents: [pm-ba-agent, developer-agent, qa-agent, devops-agent]
+    external_model_policy: approved-only
+    shared_memory: false
+  customer-b:
+    workspace: ./workspace/customer-b
+    allowed_agents: [pm-ba-agent, developer-agent, qa-agent, devops-agent]
+    external_model_policy: approved-only
+    shared_memory: false
+shared:
+  approved_skills_path: ./workspace/shared/approved-skills
+  customer_specific_data_allowed: false

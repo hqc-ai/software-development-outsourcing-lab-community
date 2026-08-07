@@ -1,0 +1,20 @@
+version: 1
+levels:
+  L0:
+    examples: [read-public-docs, inspect-non-sensitive-metadata]
+    approval: automatic
+  L1:
+    examples: [draft-user-story, draft-code, draft-test-case, analyze-build-log]
+    approval: automatic
+  L2:
+    examples: [update-test-branch, run-approved-non-prod-job]
+    approval: policy-controlled
+  L3:
+    examples: [customer-message, external-commitment, protected-pr-action]
+    approval: human
+  L4:
+    examples: [production-deploy, delete-artifact, change-access-rights]
+    approval: explicit-human
+  L5:
+    examples: [cross-customer-data-access, prohibited-secret-exfiltration]
+    approval: forbidden
